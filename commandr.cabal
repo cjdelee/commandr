@@ -7,11 +7,11 @@ cabal-version: 1.12
 name:           commandr
 version:        0.1.0.0
 description:    Please see the README on GitHub at <https://github.com/githubuser/commandr#readme>
-homepage:       https://github.com/githubuser/commandr#readme
-bug-reports:    https://github.com/githubuser/commandr/issues
-author:         Author name here
+homepage:       https://github.com/cjdelee/commandr#readme
+bug-reports:    https://github.com/cjdelee/commandr/issues
+author:         Connor DeLee
 maintainer:     example@example.com
-copyright:      2022 Author name here
+copyright:      2022 Connor DeLee
 license:        BSD3
 license-file:   LICENSE
 build-type:     Simple
@@ -21,7 +21,7 @@ extra-source-files:
 
 source-repository head
   type: git
-  location: https://github.com/githubuser/commandr
+  location: https://github.com/cjdelee/commandr
 
 library
   exposed-modules:
