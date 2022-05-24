@@ -32,6 +32,9 @@ library
       src
   build-depends:
       base >=4.7 && <5
+    , gi-gtk ==3.0.38
+    , gi-gtk-hs
+    , haskell-gi-base
   default-language: Haskell2010
 
 executable commandr-exe
@@ -44,6 +47,9 @@ executable commandr-exe
   build-depends:
       base >=4.7 && <5
     , commandr
+    , gi-gtk ==3.0.38
+    , gi-gtk-hs
+    , haskell-gi-base
   default-language: Haskell2010
 
 test-suite commandr-test
@@ -57,4 +63,7 @@ test-suite commandr-test
   build-depends:
       base >=4.7 && <5
     , commandr
+    , gi-gtk ==3.0.38
+    , gi-gtk-hs
+    , haskell-gi-base
   default-language: Haskell2010
