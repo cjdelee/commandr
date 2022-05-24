@@ -24,6 +24,7 @@ dependencies:
 - gi-gtk == 3.0.38
 - gi-gtk-hs
 - haskell-gi-base
+- directory
 
 library:
   source-dirs: src
