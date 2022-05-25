@@ -12,9 +12,9 @@ cd commandr
 ```
 3. Run `stack install` to compile and install Commandr. This will create an executable in your `$PATH/.local/bin` directory
 4. Make sure this directory is added to your `PATH` environment variable. This will be found in your `.bashrc` file (or `.zshrc` if you are using the ZSH shell)
-  * Open your `.bashrc`/`.zshrc` file in a text editor
-  * Find the section that contains a series of lines beginning with `export`. This should be close to the top of the file
-  * Add the following and write out the file:
+    * Open your `.bashrc`/`.zshrc` file in a text editor
+    * Find the section that contains a series of lines beginning with `export`. This should be close to the top of the file
+    * Add the following and write out the file:
   ```lang-bash
   export PATH="$HOME/.local/bin:$PATH"
   ```
