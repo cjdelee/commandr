@@ -15,7 +15,7 @@ cd commandr
     * Open your `.bashrc`/`.zshrc` file in a text editor
     * Find the section that contains a series of lines beginning with `export`. This should be close to the top of the file
     * Add the following and write out the file:
-  ```lang-bash
-  export PATH="$HOME/.local/bin:$PATH"
-  ```
+    ```lang-bash
+    export PATH="$HOME/.local/bin:$PATH"
+    ```
 5. Run Commandr from the terminal with the `commandr-exe` command
