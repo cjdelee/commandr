@@ -9,5 +9,5 @@ Credit to Derek Taylor (DistroTube) for his video on creating an application lik
 git clone https://github.com/cjdelee/commandr
 cd commandr
 ```
-2. Run the install script with `./install`
+2. Run the install script with `./install` (This does not exist yet!)
 3. Launch Commandr from a terminal by using `commandr`
