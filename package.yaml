@@ -25,6 +25,8 @@ dependencies:
 - gi-gtk-hs
 - haskell-gi-base
 - directory
+- process
+- unix
 
 library:
   source-dirs: src
