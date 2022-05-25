@@ -6,6 +6,8 @@ module Main where
 import qualified GI.Gtk as Gtk
 import Data.GI.Base
 import System.Directory
+import System.Process
+import System.Posix.User
 
 main :: IO ()
 main = do
@@ -15,6 +17,7 @@ main = do
   win <- Gtk.windowNew Gtk.WindowTypeToplevel               -- Set the variable win to be a new GTK window
   home <- getHomeDirectory
   grid <- Gtk.gridNew
+  user <- getEffectiveUserName
   imgLogout <- Gtk.imageNewFromFile $ home ++ "/commandr/image/logout.png"
   imgShutdown <- Gtk.imageNewFromFile $ home ++ "/commandr/image/shutdown.png"
   imgCancel <- Gtk.imageNewFromFile $ home ++ "/commandr/image/cancel.png"
@@ -71,7 +74,7 @@ main = do
   Gtk.widgetSetHexpand btnLogout False
   on btnLogout #clicked $ do
     putStrLn "User logged out"
-    Gtk.widgetDestroy win
+    callCommand $ "pkill -u " ++ user
 
 -- Shutdown
   Gtk.buttonSetRelief btnShutdown Gtk.ReliefStyleNone
@@ -79,7 +82,7 @@ main = do
   Gtk.widgetSetHexpand btnShutdown False
   on btnShutdown #clicked $ do
     putStrLn "User shut down the system"
-    Gtk.widgetDestroy win
+    callCommand "shutdown -h now"
 
   -- Suspend
   Gtk.buttonSetRelief btnSuspend Gtk.ReliefStyleNone
@@ -87,7 +90,7 @@ main = do
   Gtk.widgetSetHexpand btnSuspend False
   on btnSuspend #clicked $ do
     putStrLn "User suspended"
-    Gtk.widgetDestroy win
+    callCommand "systemctl suspend"
 
   -- Hibernate
   Gtk.buttonSetRelief btnHibernate Gtk.ReliefStyleNone
@@ -95,7 +98,7 @@ main = do
   Gtk.widgetSetHexpand btnHibernate False
   on btnHibernate #clicked $ do
     putStrLn "User hibernated"
-    Gtk.widgetDestroy win
+    callCommand "systemctl hibernate"
 
   -- Restart
   Gtk.buttonSetRelief btnRestart Gtk.ReliefStyleNone
@@ -103,20 +106,20 @@ main = do
   Gtk.widgetSetHexpand btnRestart False
   on btnRestart #clicked $ do
     putStrLn "User restarted"
-    Gtk.widgetDestroy win
+    callCommand "reboot"
 
 -- Add buttons to the grid and the grid to the GTK window
-  #attach grid btnCancel 0 0 1 1
-  #attach grid btnLogout 1 0 1 1
-  #attach grid btnRestart 2 0 1 1
-  #attach grid btnShutdown 3 0 1 1
-  #attach grid btnSuspend 4 0 1 1
-  #attach grid btnHibernate 5 0 1 1
-  #attach grid labelCancel 0 1 1 1
-  #attach grid labelLogout 1 1 1 1
-  #attach grid labelRestart 2 1 1 1
-  #attach grid labelShutdown 3 1 1 1
-  #attach grid labelSuspend 4 1 1 1
+  #attach grid btnCancel      0 0 1 1
+  #attach grid btnLogout      1 0 1 1
+  #attach grid btnRestart     2 0 1 1
+  #attach grid btnShutdown    3 0 1 1
+  #attach grid btnSuspend     4 0 1 1
+  #attach grid btnHibernate   5 0 1 1
+  #attach grid labelCancel    0 1 1 1
+  #attach grid labelLogout    1 1 1 1
+  #attach grid labelRestart   2 1 1 1
+  #attach grid labelShutdown  3 1 1 1
+  #attach grid labelSuspend   4 1 1 1
   #attach grid labelHibernate 5 1 1 1
   #add win grid
 
