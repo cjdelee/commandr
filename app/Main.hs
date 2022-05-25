@@ -3,6 +3,7 @@
 
 module Main where
 
+-- IMPORTS
 import qualified GI.Gtk as Gtk
 import Data.GI.Base
 import System.Directory
@@ -123,6 +124,8 @@ main = do
   #attach grid labelHibernate 5 1 1 1
   #add win grid
 
+-- Kills the program once the window closes
   Gtk.onWidgetDestroy win Gtk.mainQuit
+  
   #showAll win
   Gtk.main
