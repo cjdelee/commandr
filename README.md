@@ -19,7 +19,7 @@ cd commandr
     export PATH="$HOME/.local/bin:$PATH"
     ```
 5. Run Commandr from the terminal with the `commandr-exe` command
-
+___
 ## TODO
 - [ ] Figure out how recursion works to clean up the code
 - [ ] Update the UI so it looks nicer
