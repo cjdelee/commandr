@@ -21,7 +21,7 @@ cd commandr
 5. Run Commandr from the terminal with the `commandr-exe` command
 
 ## TODO
-- [] Figure out how recursion works to clean up the code
-- [] Update the UI so it looks nicer
-- [] Figure out how to set up user configuration to allow for custom color schemes
-- [] Add more tools, such as volume and brightness sliders, WiFi button
+- [ ] Figure out how recursion works to clean up the code
+- [ ] Update the UI so it looks nicer
+- [ ] Figure out how to set up user configuration to allow for custom color schemes
+- [ ] Add more tools, such as volume and brightness sliders, WiFi button
