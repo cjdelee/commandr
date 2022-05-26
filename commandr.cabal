@@ -5,8 +5,8 @@ cabal-version: 1.12
 -- see: https://github.com/sol/hpack
 
 name:           commandr
-version:        0.1.0.0
-description:    Please see the README on GitHub at <https://github.com/githubuser/commandr#readme>
+version:        0.1.2.0
+description:    Please see the README on GitHub at <https://github.com/cjdelee/commandr#readme>
 homepage:       https://github.com/cjdelee/commandr#readme
 bug-reports:    https://github.com/cjdelee/commandr/issues
 author:         Connor DeLee
