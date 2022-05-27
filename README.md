@@ -22,4 +22,9 @@ ___
 - [ ] Figure out how recursion works to clean up the code
 - [ ] Update the UI so it looks nicer
 - [ ] Figure out how to set up user configuration to allow for custom color schemes
-- [ ] Add more tools, such as volume and brightness sliders, WiFi button
+- [ ] Add more tools
+    - Plans/Ideas for additional tools to add:
+        - [ ] Volume slider
+        - [ ] Brightness slider
+        - [ ] WiFi toggle
+        - [ ] Clock and date 
