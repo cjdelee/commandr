@@ -9,7 +9,7 @@ There are currently no distro packages for Commandr, so you will need to build t
 ```
 curl -sSL https://get.haskellstack.org/ | sh
 ```
-2. Clone the Commandr git repository to your Home directory, then build Commandr with Stack
+2. Clone the Commandr git repository to your Home directory, build Commandr with Stack, then move the binary
 ```
 git clone https://github.com/cjdelee/commandr
 cd commandr
